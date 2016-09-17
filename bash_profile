@@ -7,6 +7,7 @@ alias path='echo $PATH'
 alias des='cd ~/Desktop'
 alias down='cd ~/Downloads'
 alias home='cd ~/'
+alias cls="clear && printf '\e[3J'"
 
 function quit {
     osascript -e 'tell application "Terminal" to quit' 

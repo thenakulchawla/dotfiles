@@ -3,6 +3,13 @@ set hls
 set number
 set ai
 
+
+autocmd InsertEnter * : silent exec "!printf '\033]50;CursorShape=2\x7'" | exec ":redraw!"
+autocmd InsertLeave * : silent exec "!printf '\033]50;CursorShape=0\x7'" | exec ":redraw!"
+
+":map <CAPS> <Esc>
+"setxkbmap -option 'caps:escape' 
+
 set nocompatible              " required
 filetype off                  " required
 

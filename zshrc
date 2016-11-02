@@ -14,3 +14,5 @@ function quit {
     osascript -e 'tell application "Terminal" to quit' 
 	}
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

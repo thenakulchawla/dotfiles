@@ -7,27 +7,52 @@ set ai
 autocmd InsertEnter * : silent exec "!printf '\033]50;CursorShape=2\x7'" | exec ":redraw!"
 autocmd InsertLeave * : silent exec "!printf '\033]50;CursorShape=0\x7'" | exec ":redraw!"
 
-":map <CAPS> <Esc>
-"setxkbmap -option 'caps:escape' 
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 
 set nocompatible              " required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged')
+" Make sure you use single quotes
+"
+" " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
+"
+" " Any valid git URL is allowed
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+"
+" " Group dependencies, vim-snippets depends on ultisnips
+ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+"
+" " On-demand loading
+ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+"
+" " Using a non-master branch
+ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+"
+" " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
+ Plug 'fatih/vim-go', { 'tag': '*' }
+"
+" " Plugin options
+ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+"
+" " Plugin outside ~/.vim/plugged with post-update hook
+ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"
+" " Unmanaged plugin (manually installed and updated)
+ Plug '~/my-prototype-plugin'
+"
+" " Add plugins to &runtimepath
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+call plug#end()
 
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+
+
 filetype plugin indent on    " requiredi
 
 syntax on

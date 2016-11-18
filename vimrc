@@ -3,7 +3,6 @@ set hls
 set number
 set ai
 
-
 autocmd InsertEnter * : silent exec "!printf '\033]50;CursorShape=2\x7'" | exec ":redraw!"
 autocmd InsertLeave * : silent exec "!printf '\033]50;CursorShape=0\x7'" | exec ":redraw!"
 
@@ -13,6 +12,21 @@ set omnifunc=syntaxcomplete#Complete
 
 set nocompatible              " required
 filetype off                  " required
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()            " required
+filetype plugin indent on    " 
+
 
 "call plug#begin('~/.vim/plugged')
 call plug#begin('~/.vim/plugged')
@@ -103,9 +117,9 @@ set laststatus=2
  if v:version >= 700
     " Enable spell check for text files
       autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
-     endif
-     " mappings
-     " toggle list mode
-     nmap <LocalLeader>tl :set list!<cr>
-     " toggle paste mode
-     nmap <LocalLeader>pp :set paste!<cr>
+endif
+" mappings
+" toggle list mode
+nmap <LocalLeader>tl :set list!<cr>
+" toggle paste mode
+nmap <LocalLeader>pp :set paste!<cr>

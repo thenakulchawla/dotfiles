@@ -2,6 +2,7 @@ syntax on
 set hls
 set number
 set ai
+set noswapfile
 
 autocmd InsertEnter * : silent exec "!printf '\033]50;CursorShape=2\x7'" | exec ":redraw!"
 autocmd InsertLeave * : silent exec "!printf '\033]50;CursorShape=0\x7'" | exec ":redraw!"
@@ -23,6 +24,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'klen/python-mode'
 
 call vundle#end()            " required
 filetype plugin indent on    " 

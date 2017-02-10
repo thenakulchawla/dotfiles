@@ -10,6 +10,8 @@ alias home='cd ~/'
 alias cls="clear && printf '\e[3J'"
 alias localvar='cd /usr/local/var'
 alias usr='cd /usr'
+export PATH=/Library/TeX/texbin:$PATH
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 function quit {
     osascript -e 'tell application "Terminal" to quit' 

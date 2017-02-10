@@ -1,8 +1,3 @@
-syntax on
-set hls
-set number
-set ai
-set noswapfile
 
 autocmd InsertEnter * : silent exec "!printf '\033]50;CursorShape=2\x7'" | exec ":redraw!"
 autocmd InsertLeave * : silent exec "!printf '\033]50;CursorShape=0\x7'" | exec ":redraw!"
@@ -13,23 +8,8 @@ set omnifunc=syntaxcomplete#Complete
 
 set nocompatible              " required
 filetype off                  " required
-set nocompatible              " be iMproved, required
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'klen/python-mode'
-
-call vundle#end()            " required
-filetype plugin indent on    " 
-
+" Plugins
 
 "call plug#begin('~/.vim/plugged')
 call plug#begin('~/.vim/plugged')
@@ -65,10 +45,34 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 "
 " " Add plugins to &runtimepath
 
+Plug 'davidhalter/jedi-vim'  " Python autocomplete
+
+Plug 'klen/python-mode'     " Python autocomplete
+
+"Plug 'Valloric/YouCompleteMe' "C autocomplete YCM
+
+"Plug 'lervag/vimtex'   "vim latex
+
 call plug#end()
 
+"Key Remaps
+		" Standard Keys
+				
+				nnoremap ; :
 
-
+		" Control Keys
+			"	map      <C-w>o ;tab sp<CR>
+				map <space>q  <c-W>q
+        map <space>H  <c-W>H
+        map <space>J  <c-W>J
+        map <space>K  <c-W>K
+        map <space>L  <c-W>L
+        map <space>h  <c-W>h
+        map <space>j  <c-W>j
+        map <space>k  <c-W>k
+        map <space>l  <c-W>l
+        map <space>w  <c-W>w
+				map <space>W  <c-W>W
 
 filetype plugin indent on    " requiredi
 
@@ -77,6 +81,7 @@ set background=dark
 set ruler                     " show the line number on the bar
 set more                      " use more prompt
 set autoread                  " watch for file changes
+set modifiable
 set number                    " line numbers
 set hidden
 set noautowrite               " don't automagically write on :next
@@ -102,6 +107,8 @@ set noerrorbells              " No error bells please
 set shell=bash
 set fileformats=unix
 set ff=unix
+set nohlsearch
+
 filetype on                   " Enable filetype detection
 filetype indent on            " Enable filetype-specific indenting
 filetype plugin on            " Enable filetype-specific plugins
@@ -109,6 +116,12 @@ set wildmode=longest:full
 set wildmenu                  " menu has tab completion
 let maplocalleader=','        " all my macros start with ,
 set laststatus=2
+set hls
+set number
+set ai
+set noswapfile
+set foldmethod=syntax
+"set spell spelllang=en_us
 
 "  searching
  set incsearch                 " incremental search
@@ -116,6 +129,7 @@ set laststatus=2
  set hlsearch                  " highlight the search
  set showmatch                 " show matching bracket
  set diffopt=filler,iwhite     " ignore all whitespace and sync
+
 "  " spelling
  if v:version >= 700
     " Enable spell check for text files
@@ -126,3 +140,37 @@ endif
 nmap <LocalLeader>tl :set list!<cr>
 " toggle paste mode
 nmap <LocalLeader>pp :set paste!<cr>
+
+"function! CFoldLevel(lnum)
+"  let line = getline(a:lnum)
+"  if line =~ '^/\*'
+"    return '>1' " A new fold of level 1 starts here.
+"  else
+"    return '1' " This line has a foldlevel of 1.
+"  endif
+"endfunction
+"
+"function! CFoldText()
+"  " Look through all of the folded text for the function signature.
+"  let signature = ''
+"  let i = v:foldstart
+"  while signature == '' && i < v:foldend
+"    let line = getline(i)
+"    if line =~ '\w\+(.*)$'
+"      let signature = line
+"    endif 
+"    let i = i + 1
+"  endwhile
+"
+"  " Return what the fold should show when folded.
+"  return '+-- ' . (v:foldend - v:foldstart) . ' Lines: ' . signature . ' '
+"endfunction
+"
+"function! CFold()               
+"  set foldenable
+"  set foldlevel=0   
+"  set foldmethod=expr
+"  set foldexpr=CFoldLevel(v:lnum)
+"  set foldtext=CFoldText()
+"  set foldnestmax=1
+"endfunction

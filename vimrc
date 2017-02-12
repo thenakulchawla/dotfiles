@@ -1,4 +1,3 @@
-
 autocmd InsertEnter * : silent exec "!printf '\033]50;CursorShape=2\x7'" | exec ":redraw!"
 autocmd InsertLeave * : silent exec "!printf '\033]50;CursorShape=0\x7'" | exec ":redraw!"
 
@@ -49,7 +48,7 @@ Plug 'davidhalter/jedi-vim'  " Python autocomplete
 
 Plug 'klen/python-mode'     " Python autocomplete
 
-"Plug 'Valloric/YouCompleteMe' "C autocomplete YCM
+Plug 'Valloric/YouCompleteMe' "C autocomplete YCM
 
 "Plug 'lervag/vimtex'   "vim latex
 

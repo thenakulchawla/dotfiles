@@ -74,6 +74,7 @@ call plug#end()
 				map <space>W  <c-W>W
 
 filetype plugin indent on    " requiredi
+let g:pymode_options_colorcolumn = 0		"  to remove the red line in pymode at column 80
 
 syntax on
 set background=dark
@@ -120,7 +121,7 @@ set number
 set ai
 set noswapfile
 set foldmethod=syntax
-"set spell spelllang=en_us
+set spell spelllang=en_us
 
 "  searching
  set incsearch                 " incremental search

@@ -1,8 +1,11 @@
-# Color output
-zstyle ':prezto:*:*' color 'yes'  # (auto set to 'no' on dumb terminals).
+zstyle ':prezto:*:*' case-sensitive 'yes'
 
-# Set the Prezto modules to load (browse modules).
-# The order matters.
+zstyle ':prezto:*:*' color 'yes'
+
+zstyle ':prezto:load' zmodule 'attr' 'stat'
+
+zstyle ':prezto:load' zfunction 'zargs' 'zmv'
+
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
@@ -12,25 +15,68 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'utility' \
-  'archive' \
   'completion' \
-  'prompt' \
+  'homebrew' \
+  'osx' \
+  'ruby' \
+  'rails' \
   'git' \
+  'node' \
   'python' \
-  'pip' \
-  'repo' \
-  'rooter' \
-  'rsync' \
-  'command-editor' \
-  'aliases' \
-  'autorename'
+  'haskell' \
+  'tmux' \
+  'utility' \
+  'prompt'
 
-# Editor
+zstyle ':prezto:module:autosuggestions:color' found ''
+
 zstyle ':prezto:module:editor' key-bindings 'emacs'
-zstyle ':prezto:module:editor' dot-expansion 'yes'  # Auto convert .... to ../..
 
-# Prompt
+zstyle ':prezto:module:editor' dot-expansion 'yes'
+
+zstyle ':prezto:module:git:status:ignore' submodules 'all'
+
+zstyle ':prezto:module:gnu-utility' prefix 'g'
+
+zstyle ':prezto:module:history-substring-search:color' found ''
+
+zstyle ':prezto:module:history-substring-search:color' not-found ''
+
+zstyle ':prezto:module:history-substring-search' globbing-flags ''
+
+zstyle ':prezto:module:pacman' frontend 'yaourt'
+
 zstyle ':prezto:module:prompt' theme 'steeef'
 
-# Python
-zstyle ':prezto:module:python:info:virtualenv' format '%v'  # %v - virtualenv name.
+zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+
+zstyle ':prezto:module:screen:auto-start' local 'yes'
+
+zstyle ':prezto:module:screen:auto-start' remote 'yes'
+
+zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
+
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+   'main' \
+   'brackets' \
+   'pattern' \
+   'line' \
+   'cursor' \
+   'root'
+
+zstyle ':prezto:module:syntax-highlighting' styles \
+   'builtin' 'bg=blue' \
+   'command' 'bg=blue' \
+   'function' 'bg=blue'
+
+zstyle ':prezto:module:terminal' auto-title 'yes'
+
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+
+zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
+
+zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+
+zstyle ':prezto:module:tmux:iterm' integrate 'yes'

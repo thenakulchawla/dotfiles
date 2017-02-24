@@ -108,6 +108,7 @@ set shell=bash
 set fileformats=unix
 set ff=unix
 set nohlsearch
+set relativenumber            "relative numbers
 
 filetype on                   " Enable filetype detection
 filetype indent on            " Enable filetype-specific indenting
@@ -121,7 +122,7 @@ set number
 set ai
 set noswapfile
 set foldmethod=syntax
-set spell spelllang=en_us
+"set spell spelllang=en_us
 
 "  searching
  set incsearch                 " incremental search

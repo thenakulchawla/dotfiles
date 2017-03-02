@@ -39,6 +39,7 @@ alias localvar='cd /usr/local/var'
 alias usr='cd /usr'
 export PATH=/Library/TeX/texbin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
+export KEYTIMEOUT=1
 
 function quit {
     osascript -e 'tell application "Terminal" to quit' 

@@ -122,7 +122,7 @@ set number
 set ai
 set noswapfile
 set foldmethod=syntax
-"set spell spelllang=en_us
+set spell spelllang=en_us
 
 "  searching
  set incsearch                 " incremental search

@@ -37,15 +37,15 @@ alias home='cd ~/'
 alias cls="clear && printf '\e[3J'"
 alias localvar='cd /usr/local/var'
 alias usr='cd /usr'
-alias hstartdfs="/usr/local/Cellar/hadoop/2.7.3/sbin/start-dfs.sh" 
-alias hstartyarn="/usr/local/Cellar/hadoop/2.7.3/sbin/start-yarn.sh"
-alias hstopyarn="/usr/local/Cellar/hadoop/2.7.3/sbin/stop-yarn.sh"
-alias hstopdfs="/usr/local/Cellar/hadoop/2.7.3/sbin/stop-dfs.sh"
 export PATH=/Library/TeX/texbin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 export KEYTIMEOUT=1
 export PATH=/usr/local/share/dotnet:$PATH
+export HADOOP_HOME="/Users/princechawla/hadoop"
+export HADOOP_CLASSPATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/tools.jar"
 
 function quit {
     osascript -e 'tell application "Terminal" to quit' 
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

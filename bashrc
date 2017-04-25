@@ -16,3 +16,5 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 function quit {
     osascript -e 'tell application "Terminal" to quit' 
 }
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

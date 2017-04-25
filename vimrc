@@ -52,6 +52,8 @@ Plug 'Valloric/YouCompleteMe' "C autocomplete YCM
 
 "Plug 'lervag/vimtex'   "vim latex
 
+Plug 'tpope/vim-surround' " Vim surround
+
 call plug#end()
 
 "Key Remaps
@@ -132,10 +134,10 @@ set foldmethod=syntax
  set diffopt=filler,iwhite     " ignore all whitespace and sync
 
 "  " spelling
- if v:version >= 700
-    " Enable spell check for text files
-      autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
-endif
+" if v:version >= 700
+"    " Enable spell check for text files
+"      autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
+"endif
 " mappings
 " toggle list mode
 nmap <LocalLeader>tl :set list!<cr>

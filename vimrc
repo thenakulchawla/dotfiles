@@ -54,12 +54,17 @@ Plug 'Valloric/YouCompleteMe' "C autocomplete YCM
 
 Plug 'tpope/vim-surround' " Vim surround
 
+"vim solarized
+Plug 'altercation/vim-colors-solarized'
+
 call plug#end()
+
 
 "Key Remaps
 		" Standard Keys
 				
 				nnoremap ; :
+				nnoremap : ;
 
 		" Control Keys
 			"	map      <C-w>o ;tab sp<CR>
@@ -79,7 +84,15 @@ filetype plugin indent on    " requiredi
 let g:pymode_options_colorcolumn = 0		"  to remove the red line in pymode at column 80
 
 syntax on
-set background=dark
+colorscheme solarized
+set background=light
+
+"Text width
+set tw=80
+set cc=+1
+set wrap
+
+
 set ruler                     " show the line number on the bar
 set more                      " use more prompt
 set autoread                  " watch for file changes
@@ -124,7 +137,7 @@ set number
 set ai
 set noswapfile
 set foldmethod=syntax
-"set spell spelllang=en_us
+set spell spelllang=en_us
 
 "  searching
  set incsearch                 " incremental search
@@ -144,36 +157,3 @@ nmap <LocalLeader>tl :set list!<cr>
 " toggle paste mode
 nmap <LocalLeader>pp :set paste!<cr>
 
-"function! CFoldLevel(lnum)
-"  let line = getline(a:lnum)
-"  if line =~ '^/\*'
-"    return '>1' " A new fold of level 1 starts here.
-"  else
-"    return '1' " This line has a foldlevel of 1.
-"  endif
-"endfunction
-"
-"function! CFoldText()
-"  " Look through all of the folded text for the function signature.
-"  let signature = ''
-"  let i = v:foldstart
-"  while signature == '' && i < v:foldend
-"    let line = getline(i)
-"    if line =~ '\w\+(.*)$'
-"      let signature = line
-"    endif 
-"    let i = i + 1
-"  endwhile
-"
-"  " Return what the fold should show when folded.
-"  return '+-- ' . (v:foldend - v:foldstart) . ' Lines: ' . signature . ' '
-"endfunction
-"
-"function! CFold()               
-"  set foldenable
-"  set foldlevel=0   
-"  set foldmethod=expr
-"  set foldexpr=CFoldLevel(v:lnum)
-"  set foldtext=CFoldText()
-"  set foldnestmax=1
-"endfunction

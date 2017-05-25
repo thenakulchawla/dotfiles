@@ -48,7 +48,7 @@ Plug 'davidhalter/jedi-vim'  " Python autocomplete
 
 Plug 'klen/python-mode'     " Python autocomplete
 
-Plug 'Valloric/YouCompleteMe' "C autocomplete YCM
+Plug 'artur-shaik/vim-javacomplete2'  " Java Autocomplete
 
 "Plug 'lervag/vimtex'   "vim latex
 
@@ -156,4 +156,9 @@ set spell spelllang=en_us
 nmap <LocalLeader>tl :set list!<cr>
 " toggle paste mode
 nmap <LocalLeader>pp :set paste!<cr>
+
+"cursor toggle for vim iTerm tmux
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 

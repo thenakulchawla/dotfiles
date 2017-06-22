@@ -10,52 +10,18 @@ filetype off                  " required
 
 " Plugins
 
-"call plug#begin('~/.vim/plugged')
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
-"
-" " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'junegunn/vim-easy-align'
-"
-" " Any valid git URL is allowed
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-"
-" " Group dependencies, vim-snippets depends on ultisnips
- Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-"
 " " On-demand loading
- Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
- Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-"
-" " Using a non-master branch
- Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-"
-" " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
- Plug 'fatih/vim-go', { 'tag': '*' }
-"
-" " Plugin options
- Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-"
-" " Plugin outside ~/.vim/plugged with post-update hook
- Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-"
-" " Unmanaged plugin (manually installed and updated)
- Plug '~/my-prototype-plugin'
-"
-" " Add plugins to &runtimepath
-
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' } " Using a non-master branch
 Plug 'davidhalter/jedi-vim'  " Python autocomplete
-
 Plug 'klen/python-mode'     " Python autocomplete
-
-Plug 'artur-shaik/vim-javacomplete2'  " Java Autocomplete
-
+"Plug 'artur-shaik/vim-javacomplete2'  " Java Autocomplete
 "Plug 'lervag/vimtex'   "vim latex
-
 Plug 'tpope/vim-surround' " Vim surround
-
-"vim solarized
-Plug 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'  "vim solarized
 
 call plug#end()
 
@@ -65,6 +31,7 @@ call plug#end()
 				
 				nnoremap ; :
 				nnoremap : ;
+				cnoremap sudow w !sudo tee % >/dev/null
 
 		" Control Keys
 			"	map      <C-w>o ;tab sp<CR>
@@ -119,7 +86,7 @@ set updatecount=100           " switch every 100 chars
 set complete=.,w,b,u,U,t,i,d  " do lots of scanning on tab completion
 set ttyfast                   " we have a fast terminal
 set noerrorbells              " No error bells please
-set shell=bash
+"set shell=bash
 set fileformats=unix
 set ff=unix
 set nohlsearch

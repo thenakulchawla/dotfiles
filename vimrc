@@ -13,11 +13,12 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 " " On-demand loading
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' } " Using a non-master branch
 Plug 'davidhalter/jedi-vim'  " Python autocomplete
-Plug 'klen/python-mode'     " Python autocomplete
+"Plug 'klen/python-mode'     " Python autocomplete
 "Plug 'artur-shaik/vim-javacomplete2'  " Java Autocomplete
 "Plug 'lervag/vimtex'   "vim latex
 Plug 'tpope/vim-surround' " Vim surround
@@ -48,7 +49,7 @@ call plug#end()
 				map <space>W  <c-W>W
 
 filetype plugin indent on    " requiredi
-let g:pymode_options_colorcolumn = 0		"  to remove the red line in pymode at column 80
+"let g:pymode_options_colorcolumn = 0		"  to remove the red line in pymode at column 80
 
 syntax on
 colorscheme solarized
@@ -58,7 +59,7 @@ set background=light
 set tw=80
 set cc=+1
 set wrap
-
+highlight ColorColumn ctermbg=7
 
 set ruler                     " show the line number on the bar
 set more                      " use more prompt

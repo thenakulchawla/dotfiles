@@ -9,18 +9,19 @@ set nocompatible              " required
 filetype off                  " required
 
 " Plugins
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 " " On-demand loading
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' } " Using a non-master branch
-Plug 'davidhalter/jedi-vim'  " Python autocomplete
-"Plug 'klen/python-mode'     " Python autocomplete
-"Plug 'artur-shaik/vim-javacomplete2'  " Java Autocomplete
-"Plug 'lervag/vimtex'   "vim latex
 Plug 'tpope/vim-surround' " Vim surround
 Plug 'altercation/vim-colors-solarized'  "vim solarized
 

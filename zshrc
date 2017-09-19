@@ -37,6 +37,9 @@ alias cls="clear && printf '\e[3J'"
 alias localvar='cd /usr/local/var'
 alias usr='cd /usr'
 alias home='cd'
+alias cascade='ssh -p 6022 nchawla3@www.thothlab.com'
+alias lab='ssh nchawla3@10.218.108.75'
+alias g++='g++ -std=c++11'
 export PATH=/Library/TeX/texbin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 export KEYTIMEOUT=1

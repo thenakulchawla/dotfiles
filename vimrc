@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-surround' " Vim surround
 Plug 'altercation/vim-colors-solarized'  "vim solarized
+Plug 'berdandy/ansiesc.vim' "Ansiesc to conceal ANSI escape sequences
 
 call plug#end()
 
@@ -57,7 +58,7 @@ colorscheme solarized
 set background=light
 
 "Text width
-set tw=80
+"set tw=80
 set cc=+1
 set wrap
 highlight ColorColumn ctermbg=7
@@ -93,6 +94,7 @@ set fileformats=unix
 set ff=unix
 set nohlsearch
 set relativenumber            "relative numbers
+set pastetoggle=<F2>          "Use F2 key to toggle set paste in insert mode
 
 filetype on                   " Enable filetype detection
 filetype indent on            " Enable filetype-specific indenting
@@ -125,7 +127,7 @@ set spell spelllang=en_us
 nmap <LocalLeader>tl :set list!<cr>
 " toggle paste mode
 nmap <LocalLeader>pp :set paste!<cr>
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 "cursor toggle for vim iTerm tmux
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"

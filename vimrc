@@ -2,21 +2,23 @@ autocmd InsertEnter * : silent exec "!printf '\033]50;CursorShape=2\x7'" | exec 
 autocmd InsertLeave * : silent exec "!printf '\033]50;CursorShape=0\x7'" | exec ":redraw!"
 
 filetype plugin on
-set omnifunc=syntaxcomplete#Complete
+" set omnifunc=syntaxcomplete#Complete
 
 
 set nocompatible              " required
 filetype off                  " required
 
 " Plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"
+"" let Vundle manage Vundle, required
+"Plugin 'VundleVim/Vundle.vim'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'davidhalter/jedi-vim'               " Python auto-completion
+"Plugin 'klen/python-mode'                   " Python auto-completion
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-
-call vundle#end()
+"call vundle#end()
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
@@ -76,11 +78,12 @@ set showcmd
 set nocompatible              " vim, not vi
 set autoindent smartindent    " auto/smart indent
 set smarttab                  " tab and backspace are smart
-set tabstop=2                 " 6 spaces
-set shiftwidth=2
+set tabstop=2                 " 4 spaces
+set shiftwidth=4
+set expandtab
 set scrolloff=5               " keep at least 5 lines above/below
 set sidescrolloff=5           " keep at least 5 lines left/right
-set history=200
+set history=500
 set backspace=indent,eol,start
 set linebreak
 set cmdheight=2               " command line two lines high
@@ -92,7 +95,7 @@ set noerrorbells              " No error bells please
 "set shell=bash
 set fileformats=unix
 set ff=unix
-set nohlsearch
+"set nohlsearch
 set relativenumber            "relative numbers
 set pastetoggle=<F2>          "Use F2 key to toggle set paste in insert mode
 
@@ -107,8 +110,11 @@ set hls
 set number
 set ai
 set noswapfile
-set foldmethod=syntax
-set spell spelllang=en_us
+"set foldmethod=syntax
+"set foldnestmax=1
+"set foldlevelstart=99
+"set nofoldenable    " disable folding
+"set spell spelllang=en_us
 
 "  searching
  set incsearch                 " incremental search
@@ -117,11 +123,12 @@ set spell spelllang=en_us
  set showmatch                 " show matching bracket
  set diffopt=filler,iwhite     " ignore all whitespace and sync
 
-"  " spelling
-" if v:version >= 700
-"    " Enable spell check for text files
-"      autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
-"endif
+  " spelling
+ if v:version >= 700
+    " Enable spell check for text files, tex files
+      autocmd BufNewFile,BufRead *.tex setlocal spell spelllang=en
+      autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
+endif
 " mappings
 " toggle list mode
 nmap <LocalLeader>tl :set list!<cr>

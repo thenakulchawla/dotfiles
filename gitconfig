@@ -1,5 +1,20 @@
 [diff]
 	tool = vimdiff
+[difftool]
+    prompt = false
+[alias]
+    a      = add
+    au     = add -u
+    s      = status -sb
+    ss     = status
+    d      = diff
+    dt     = difftool
+    c      = commit
+    ll     = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]%C(reset)' --decorate --date=short
+    lg     = log --stat --max-count=10
+    graph  = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    graphl = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
 [user]
 	name = nakulchawla09
 	email = nakulchawla09@gmail.com

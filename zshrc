@@ -43,6 +43,7 @@ alias dscr='~/workspace/ns-allinone-3.25/ns-3.25/scratch'
 alias dhelper='~/workspace/ns-allinone-3.25/ns-3.25/src/applications/helper'
 alias dmodel='~/workspace/ns-allinone-3.25/ns-3.25/src/applications/model'
 alias g='git'
+alias compile='( cd ~/workspace/ns-allinone-3.25/ns-3.25 && ./waf )'
 
 
 #Export to path

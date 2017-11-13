@@ -9,16 +9,14 @@ set nocompatible              " required
 filetype off                  " required
 
 " Plugins
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-"
-"" let Vundle manage Vundle, required
-"Plugin 'VundleVim/Vundle.vim'
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'davidhalter/jedi-vim'               " Python auto-completion
-"Plugin 'klen/python-mode'                   " Python auto-completion
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-"call vundle#end()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
@@ -27,6 +25,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-surround' " Vim surround
 Plug 'altercation/vim-colors-solarized'  "vim solarized
 Plug 'berdandy/ansiesc.vim' "Ansiesc to conceal ANSI escape sequences
+Plug 'tomtom/tcomment_vim' "Commenting
 
 call plug#end()
 
@@ -110,10 +109,10 @@ set hls
 set number
 set ai
 set noswapfile
+"set foldenable    " disable folding
 "set foldmethod=syntax
 "set foldnestmax=1
 "set foldlevelstart=99
-"set nofoldenable    " disable folding
 "set spell spelllang=en_us
 
 "  searching

@@ -9,14 +9,14 @@ set nocompatible              " required
 filetype off                  " required
 
 " Plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'VundleVim/Vundle.vim'
+" Plugin 'Valloric/YouCompleteMe'
 
-call vundle#end()
+" call vundle#end()
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
@@ -36,6 +36,8 @@ call plug#end()
 				nnoremap ; :
 				nnoremap : ;
 				cnoremap sudow w !sudo tee % >/dev/null
+        map j gj
+        map k gk
 
 		" Control Keys
 			"	map      <C-w>o ;tab sp<CR>
@@ -54,8 +56,14 @@ call plug#end()
 filetype plugin indent on    " requiredi
 "let g:pymode_options_colorcolumn = 0		"  to remove the red line in pymode at column 80
 
-syntax on
+" let g:solarized_termcolors=256
+syntax enable 
 colorscheme solarized
+" if has('gui_running')
+"     set background=light
+" else
+"     set background=dark
+" endif
 set background=light
 
 "Text width
@@ -109,8 +117,8 @@ set hls
 set number
 set ai
 set noswapfile
-"set foldenable    " disable folding
-"set foldmethod=syntax
+" set foldenable    " disable folding
+" set foldmethod=syntax
 "set foldnestmax=1
 "set foldlevelstart=99
 "set spell spelllang=en_us
@@ -121,6 +129,13 @@ set noswapfile
  set hlsearch                  " highlight the search
  set showmatch                 " show matching bracket
  set diffopt=filler,iwhite     " ignore all whitespace and sync
+
+ function! ReplaceBuffer(bang, newfile)
+     let curbuf = bufnr('%')
+     exec "e " . a:newfile
+     exec "bd" . a:bang . " " . curbuf
+ endfunction
+ command! -nargs=1 -complete=file -bang -bar BDE call ReplaceBuffer('<bang>', <f-args>)
 
   " spelling
  if v:version >= 700
@@ -133,7 +148,7 @@ endif
 nmap <LocalLeader>tl :set list!<cr>
 " toggle paste mode
 nmap <LocalLeader>pp :set paste!<cr>
-"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 "cursor toggle for vim iTerm tmux
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"

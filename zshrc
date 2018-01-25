@@ -3,7 +3,7 @@ export LANG=en_US.UTF-8
 if [ "$COLORTERM" = "gnome-terminal" -a "$TERM" "=~" "xterm.*" ]; then
     export TERM="xterm-256color"
 fi
-export HISTSIZE=10000
+export HISTSIZE=20000
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -36,6 +36,7 @@ alias localvar='cd /usr/local/var'
 alias usr='cd /usr'
 alias home='cd'
 alias cascade='ssh -p 6022 nchawla3@www.thothlab.com'
+alias cascadeTemp='ssh -p 6022 nchawla3@www.thothlab.org'
 alias lab='ssh nchawla3@10.218.108.75'
 alias g++='g++ -std=c++11'
 alias dash='~/workspace/ns-allinone-3.25/ns-3.25'
@@ -43,6 +44,7 @@ alias dscr='~/workspace/ns-allinone-3.25/ns-3.25/scratch'
 alias dhelper='~/workspace/ns-allinone-3.25/ns-3.25/src/applications/helper'
 alias dmodel='~/workspace/ns-allinone-3.25/ns-3.25/src/applications/model'
 alias g='git'
+alias py3='python3'
 alias compile='( cd ~/workspace/ns-allinone-3.25/ns-3.25 && ./waf )'
 
 

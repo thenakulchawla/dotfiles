@@ -67,7 +67,7 @@ colorscheme solarized
 set background=light
 
 "Text width
-"set tw=80
+set tw=80
 set cc=+1
 set wrap
 highlight ColorColumn ctermbg=7

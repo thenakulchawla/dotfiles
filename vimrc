@@ -3,6 +3,7 @@ autocmd InsertLeave * : silent exec "!printf '\033]50;CursorShape=0\x7'" | exec 
 
 filetype plugin on
 " set omnifunc=syntaxcomplete#Complete
+" let g:solarized_termcolors=16
 
 
 set nocompatible              " required
@@ -26,8 +27,11 @@ Plug 'tpope/vim-surround' " Vim surround
 Plug 'altercation/vim-colors-solarized'  "vim solarized
 Plug 'berdandy/ansiesc.vim' "Ansiesc to conceal ANSI escape sequences
 Plug 'tomtom/tcomment_vim' "Commenting
+Plug 'tomlion/vim-solidity' "solidity syntax
 
 call plug#end()
+
+
 
 
 "Key Remaps
@@ -53,17 +57,21 @@ call plug#end()
         map <space>w  <c-W>w
 				map <space>W  <c-W>W
 
+    " 'g' maps
+        map gR ;vertical resize
+
+
 filetype plugin indent on    " requiredi
 "let g:pymode_options_colorcolumn = 0		"  to remove the red line in pymode at column 80
 
-" let g:solarized_termcolors=256
 syntax enable 
-colorscheme solarized
 " if has('gui_running')
 "     set background=light
 " else
 "     set background=dark
 " endif
+" let g:solarized_termcolors=256
+colorscheme solarized
 set background=light
 
 "Text width
@@ -85,12 +93,12 @@ set showcmd
 set nocompatible              " vim, not vi
 set autoindent smartindent    " auto/smart indent
 set smarttab                  " tab and backspace are smart
-set tabstop=2                 " 4 spaces
+" set tabstop=4                 " 4 spaces
 set shiftwidth=4
 set expandtab
 set scrolloff=5               " keep at least 5 lines above/below
 set sidescrolloff=5           " keep at least 5 lines left/right
-set history=500
+set history=1000
 set backspace=indent,eol,start
 set linebreak
 set cmdheight=2               " command line two lines high
@@ -117,15 +125,11 @@ set hls
 set number
 set ai
 set noswapfile
-" set foldenable    " disable folding
 " set foldmethod=syntax
-"set foldnestmax=1
-"set foldlevelstart=99
-"set spell spelllang=en_us
 
 "  searching
  set incsearch                 " incremental search
- set ignorecase                " search ignoring case
+ set noignorecase                " search ignoring case
  set hlsearch                  " highlight the search
  set showmatch                 " show matching bracket
  set diffopt=filler,iwhite     " ignore all whitespace and sync

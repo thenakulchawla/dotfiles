@@ -44,6 +44,9 @@ alias dmodel='~/workspaceDash/ns-allinone-3.25/ns-3.25/src/applications/model'
 alias g='git'
 alias py3='python3'
 alias compile='( cd ~/workspaceDash/ns-allinone-3.25/ns-3.25 && ./waf )'
+alias wallpaper='( cd ~/timepass/quoteswall && python changeWallpaperMac.py )'
+
+
 # VMs
 alias vm1='ssh nchawla3@10.107.19.40'
 alias vm2='ssh nchawla3@10.107.19.41'

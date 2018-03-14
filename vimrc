@@ -24,28 +24,24 @@ call plug#begin('~/.vim/plugged')
 " " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-surround' " Vim surround
-Plug 'altercation/vim-colors-solarized'  "vim solarized
 Plug 'berdandy/ansiesc.vim' "Ansiesc to conceal ANSI escape sequences
 Plug 'tomtom/tcomment_vim' "Commenting
-Plug 'tomlion/vim-solidity' "solidity syntax
 
 call plug#end()
 
-
-
-
 "Key Remaps
-		" Standard Keys
-				
-				nnoremap ; :
-				nnoremap : ;
-				cnoremap sudow w !sudo tee % >/dev/null
+
+    " Standard Keys
+
+        nnoremap ; :
+        nnoremap : ;
+        cnoremap sudow w !sudo tee % >/dev/null
         map j gj
         map k gk
 
-		" Control Keys
-			"	map      <C-w>o ;tab sp<CR>
-				map <space>q  <c-W>q
+    " Control Keys
+
+        map <space>q  <c-W>q
         map <space>H  <c-W>H
         map <space>J  <c-W>J
         map <space>K  <c-W>K
@@ -55,24 +51,16 @@ call plug#end()
         map <space>k  <c-W>k
         map <space>l  <c-W>l
         map <space>w  <c-W>w
-				map <space>W  <c-W>W
+        map <space>W  <c-W>W
 
     " 'g' maps
+
         map gR ;vertical resize
 
 
 filetype plugin indent on    " requiredi
-"let g:pymode_options_colorcolumn = 0		"  to remove the red line in pymode at column 80
 
 syntax enable 
-" if has('gui_running')
-"     set background=light
-" else
-"     set background=dark
-" endif
-" let g:solarized_termcolors=256
-colorscheme solarized
-set background=light
 
 "Text width
 set tw=80
@@ -93,7 +81,6 @@ set showcmd
 set nocompatible              " vim, not vi
 set autoindent smartindent    " auto/smart indent
 set smarttab                  " tab and backspace are smart
-" set tabstop=4                 " 4 spaces
 set shiftwidth=4
 set expandtab
 set scrolloff=5               " keep at least 5 lines above/below
@@ -107,10 +94,8 @@ set updatecount=100           " switch every 100 chars
 set complete=.,w,b,u,U,t,i,d  " do lots of scanning on tab completion
 set ttyfast                   " we have a fast terminal
 set noerrorbells              " No error bells please
-"set shell=bash
 set fileformats=unix
 set ff=unix
-"set nohlsearch
 set relativenumber            "relative numbers
 set pastetoggle=<F2>          "Use F2 key to toggle set paste in insert mode
 
@@ -153,9 +138,4 @@ nmap <LocalLeader>tl :set list!<cr>
 " toggle paste mode
 nmap <LocalLeader>pp :set paste!<cr>
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-
-"cursor toggle for vim iTerm tmux
-let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 

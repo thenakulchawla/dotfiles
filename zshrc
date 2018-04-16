@@ -54,8 +54,3 @@ export KEYTIMEOUT=1
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-
-
-function quit {
-    osascript -e 'tell application "Terminal" to quit' 
-}

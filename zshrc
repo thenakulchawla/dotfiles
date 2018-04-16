@@ -91,7 +91,6 @@ alias cascade='ssh -p 6022 nchawla3@www.thothlab.org'
 #Export to path
 
 export PATH=/Library/TeX/texbin:$PATH
-export JAVA_HOME=$(/usr/libexec/java_home)
 export KEYTIMEOUT=1
 export PATH=/usr/local/share/dotnet:$PATH
 export CLICOLOR=1

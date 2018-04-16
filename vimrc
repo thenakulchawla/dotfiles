@@ -110,7 +110,7 @@ set hls
 set number
 set ai
 set noswapfile
-" set foldmethod=syntax
+set foldmethod=syntax
 
 "  searching
  set incsearch                 " incremental search

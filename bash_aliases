@@ -1,7 +1,7 @@
 alias ll='ls -GFhA'
-alias fn0='echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode'
-alias fn1='echo 1 | sudo tee /sys/module/hid_apple/parameters/fnmode'
-alias fn2='echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode'
+# alias fn0='echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode'
+# alias fn1='echo 1 | sudo tee /sys/module/hid_apple/parameters/fnmode'
+# alias fn2='echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode'
 
 alias ll='ls -GFhA'
 alias shell='echo $SHELL'

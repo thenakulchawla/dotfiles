@@ -18,14 +18,8 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'homebrew' \
-  'osx' \
-  'ruby' \
-  'rails' \
   'git' \
-  'node' \
   'python' \
-  'haskell' \
   'tmux' \
   'utility' \
   'prompt'
@@ -79,4 +73,4 @@ zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 #
 #zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
-zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+#zstyle ':prezto:module:tmux:iterm' integrate 'yes'

@@ -25,19 +25,22 @@ alias dash='cd ~/dash/src'
 # alias wallpaper='( cd ~/timepass/quoteswall && python changeWallpaperMac.py )'
 
 # VMs
+alias vm0='ssh nchawla3@10.107.19.39'
 alias vm1='ssh nchawla3@10.107.19.40'
 alias vm2='ssh nchawla3@10.107.19.41'
 alias vm3='ssh nchawla3@10.107.19.42'
 alias vm4='ssh nchawla3@10.107.19.43'
-alias vm5='ssh nchawla3@10.107.19.34'
-alias vm6='ssh nchawla3@10.107.19.35'
-alias vm7='ssh nchawla3@10.107.19.36'
-alias vm8='ssh nchawla3@10.107.19.37'
-alias vm9='ssh nchawla3@10.107.19.38'
-alias vm0='ssh nchawla3@10.107.19.39'
+# alias vm5='ssh nchawla3@10.107.19.34'
+# alias vm6='ssh nchawla3@10.107.19.35'
+# alias vm7='ssh nchawla3@10.107.19.36'
+# alias vm8='ssh nchawla3@10.107.19.37'
+# alias vm9='ssh nchawla3@10.107.19.38'
 
 alias cascadeTemp='ssh -p 6022 nchawla3@www.thothlab.com'
 alias cascade='ssh -p 6022 nchawla3@www.thothlab.org'
 
 # xclip
 alias xclip='xclip -sel clip <'
+
+# latex
+ pdflatex='pdflatex -interaction=batchmode'

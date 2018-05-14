@@ -63,9 +63,9 @@ filetype plugin indent on    " requiredi
 syntax enable 
 
 "Text width
-set tw=80
-set cc=+1
-set wrap
+" set tw=80
+" set cc=+1
+" set wrap
 highlight ColorColumn ctermbg=7
 
 set ruler                     " show the line number on the bar
@@ -111,6 +111,8 @@ set number
 set ai
 set noswapfile
 set foldmethod=syntax
+hi clear SpellBad
+hi SpellBad cterm=underline
 
 "  searching
  set incsearch                 " incremental search

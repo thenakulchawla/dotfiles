@@ -36,8 +36,8 @@ alias vm4='ssh nchawla3@10.107.19.43'
 # alias vm8='ssh nchawla3@10.107.19.37'
 # alias vm9='ssh nchawla3@10.107.19.38'
 
-alias cascadeTemp='ssh -p 6022 nchawla3@www.thothlab.com'
-alias cascade='ssh -p 6022 nchawla3@www.thothlab.org'
+alias cascade='ssh -p 6022 nchawla3@www.thothlab.com'
+alias cascadeTemp='ssh -p 6022 nchawla3@www.thothlab.org'
 
 # xclip
 alias xclip='xclip -sel clip <'

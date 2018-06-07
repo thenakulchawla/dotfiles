@@ -1,33 +1,9 @@
-autocmd InsertEnter * : silent exec "!printf '\033]50;CursorShape=2\x7'" | exec ":redraw!"
-autocmd InsertLeave * : silent exec "!printf '\033]50;CursorShape=0\x7'" | exec ":redraw!"
-
 filetype plugin on
 " set omnifunc=syntaxcomplete#Complete
 " let g:solarized_termcolors=16
 
 
 set nocompatible              " required
-filetype off                  " required
-
-" Plugins
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
-
-" let Vundle manage Vundle, required
-" Plugin 'VundleVim/Vundle.vim'
-" Plugin 'Valloric/YouCompleteMe'
-
-" call vundle#end()
-
-call plug#begin('~/.vim/plugged')
-" Make sure you use single quotes
-" " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-surround' " Vim surround
-Plug 'berdandy/ansiesc.vim' "Ansiesc to conceal ANSI escape sequences
-Plug 'tomtom/tcomment_vim' "Commenting
-
-call plug#end()
 
 "Key Remaps
 
@@ -60,12 +36,12 @@ call plug#end()
 
 filetype plugin indent on    " requiredi
 
-syntax enable 
+" syntax enable 
 
 " Text width
-set tw=120
-set cc=+1
-set wrap
+" set tw=120
+" set cc=+1
+" set wrap
 
 highlight ColorColumn ctermbg=7
 
@@ -100,9 +76,9 @@ set ff=unix
 set relativenumber            "relative numbers
 set pastetoggle=<F2>          "Use F2 key to toggle set paste in insert mode
 
-filetype on                   " Enable filetype detection
-filetype indent on            " Enable filetype-specific indenting
-filetype plugin on            " Enable filetype-specific plugins
+" filetype on                   " Enable filetype detection
+" filetype indent on            " Enable filetype-specific indenting
+" filetype plugin on            " Enable filetype-specific plugins
 set wildmode=longest:full
 set wildmenu                  " menu has tab completion
 let maplocalleader=','        " all my macros start with ,
@@ -110,8 +86,8 @@ set laststatus=2
 set hls
 set number
 set ai
-set noswapfile
-set foldmethod=syntax
+" set noswapfile
+" set foldmethod=syntax
 hi clear SpellBad
 hi SpellBad cterm=underline
 
@@ -123,19 +99,6 @@ hi SpellBad cterm=underline
  set showmatch                 " show matching bracket
  set diffopt=filler,iwhite     " ignore all whitespace and sync
 
- function! ReplaceBuffer(bang, newfile)
-     let curbuf = bufnr('%')
-     exec "e " . a:newfile
-     exec "bd" . a:bang . " " . curbuf
- endfunction
- command! -nargs=1 -complete=file -bang -bar BDE call ReplaceBuffer('<bang>', <f-args>)
-
-  " spelling
- if v:version >= 700
-    " Enable spell check for text files, tex files
-      autocmd BufNewFile,BufRead *.tex setlocal spell spelllang=en
-      autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
-endif
 " mappings
 " toggle list mode
 nmap <LocalLeader>tl :set list!<cr>

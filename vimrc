@@ -10,14 +10,14 @@ set nocompatible              " required
 filetype off                  " required
 
 " Plugins
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required
 " Plugin 'VundleVim/Vundle.vim'
 " Plugin 'Valloric/YouCompleteMe'
 
-" call vundle#end()
+call vundle#end()
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
@@ -63,7 +63,7 @@ filetype plugin indent on    " requiredi
 syntax enable 
 
 " Text width
-set tw=120
+set tw=80
 set cc=+1
 set wrap
 
@@ -117,8 +117,8 @@ hi SpellBad cterm=underline
 
 "  searching
  set incsearch                 " incremental search
-"  set noignorecase                " search ignoring case
- set ignorecase                " search ignoring case
+ set noignorecase                " search ignoring case
+"  set ignorecase                " search ignoring case
  set hlsearch                  " highlight the search
  set showmatch                 " show matching bracket
  set diffopt=filler,iwhite     " ignore all whitespace and sync

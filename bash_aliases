@@ -43,4 +43,8 @@ alias cascadeTemp='ssh -p 6022 nchawla3@www.thothlab.org'
 alias xclip='xclip -sel clip <'
 
 # latex
- pdflatex='pdflatex -interaction=batchmode'
+alias pdflatex='pdflatex -interaction=batchmode'
+
+# dash
+alias rtg='./dashd -regtest -daemon -use-grapheneblocks=1 -conf=/home/nakul/dash.conf'
+alias rtcl='./dash-cli -regtest -daemon'

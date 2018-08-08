@@ -46,5 +46,9 @@ alias xclip='xclip -sel clip <'
 alias pdflatex='pdflatex -interaction=batchmode'
 
 # dash
-alias rtg='./dashd -regtest -daemon -use-grapheneblocks=1 -conf=/home/nakul/dash.conf'
-alias rtcl='./dash-cli -regtest -daemon'
+alias rtg='./dashd -regtest -daemon -debug -use-grapheneblocks=1 -conf=/home/nchawla3/dash/dash.conf'
+alias rtcl='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug'
+alias rtcl_1='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug -port=8330 -rpcport=8331'
+alias rtcl_2='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug -port=8332 -rpcport=8333'
+alias rtcl_3='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug -port=8334 -rpcport=8335'
+alias rtcl_4='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug -port=8336 -rpcport=8337'

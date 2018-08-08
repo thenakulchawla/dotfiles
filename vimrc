@@ -63,7 +63,7 @@ filetype plugin indent on    " requiredi
 syntax enable 
 
 " Text width
-set tw=80
+set tw=120
 set cc=+1
 set wrap
 
@@ -117,7 +117,7 @@ hi SpellBad cterm=underline
 
 "  searching
  set incsearch                 " incremental search
- set noignorecase                " search ignoring case
+"  set noignorecase                " search ignoring case
 "  set ignorecase                " search ignoring case
  set hlsearch                  " highlight the search
  set showmatch                 " show matching bracket

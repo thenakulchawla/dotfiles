@@ -10,24 +10,39 @@ set nocompatible              " required
 filetype off                  " required
 
 " Plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
 
 " let Vundle manage Vundle, required
 " Plugin 'VundleVim/Vundle.vim'
 " Plugin 'Valloric/YouCompleteMe'
 
-call vundle#end()
+" call vundle#end()
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 " " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround' " Vim surround
 Plug 'berdandy/ansiesc.vim' "Ansiesc to conceal ANSI escape sequences
 Plug 'tomtom/tcomment_vim' "Commenting
 
 call plug#end()
+
+" solarized-colors
+set background=light
+" solarized options
+let g:solarized_visibility = "high"
+" let g:solarized_contrast = "high"
+" let g:solarized_termtrans = 1
+colorscheme solarized
+
+" Automatic NERDtree if there are no files specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 "Key Remaps
 
@@ -57,15 +72,19 @@ call plug#end()
 
         map gR ;vertical resize
 
+    " 'NERDtree' with C-n
 
-filetype plugin indent on    " requiredi
+        map <C-n> :NERDTreeToggle<CR>
+
+
+filetype plugin indent on    " required
 
 syntax enable 
 
 " Text width
-set tw=120
-set cc=+1
-set wrap
+" set tw=120
+" set cc=+1
+" set wrap
 
 highlight ColorColumn ctermbg=7
 
@@ -95,8 +114,8 @@ set updatecount=100           " switch every 100 chars
 set complete=.,w,b,u,U,t,i,d  " do lots of scanning on tab completion
 set ttyfast                   " we have a fast terminal
 set noerrorbells              " No error bells please
-set fileformats=unix
-set ff=unix
+" set fileformats=mac
+set ffs=unix,mac
 set relativenumber            "relative numbers
 set pastetoggle=<F2>          "Use F2 key to toggle set paste in insert mode
 
@@ -117,7 +136,7 @@ hi SpellBad cterm=underline
 
 "  searching
  set incsearch                 " incremental search
-"  set noignorecase                " search ignoring case
+ set noignorecase                " search ignoring case
 "  set ignorecase                " search ignoring case
  set hlsearch                  " highlight the search
  set showmatch                 " show matching bracket
@@ -142,4 +161,3 @@ nmap <LocalLeader>tl :set list!<cr>
 " toggle paste mode
 nmap <LocalLeader>pp :set paste!<cr>
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-

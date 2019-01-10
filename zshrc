@@ -76,3 +76,5 @@ export RDFI_EXCHANGE_SYSTEM_API_URL="http://localhost:8081/v1/callback/exchange/
 export SERVICE_ERROR_CODES_FILE="error-codes/apiErrorCodes.toml"
 export HORIZON_CLIENT_URL="https://horizon-testnet.stellar.org"
 export ORIGIN_ALLOWED="true"
+export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:$PATH
+export CC=clang

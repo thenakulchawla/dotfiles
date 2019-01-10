@@ -15,6 +15,7 @@ alias g++='g++ -std=c++11'
 # alias dmodel='~/workspace/ns-allinone-3.25/ns-3.25/src/applications/model'
 alias g='git'
 alias py3='python3'
+alias tf="terraform"
 # alias compile='( cd ~/workspace/ns-allinone-3.25/ns-3.25 && ./waf )'
 # alias dash='cd ~/dash/src'
 # alias wallpaper='( cd ~/timepass/quoteswall && python changeWallpaperMac.py )'
@@ -36,6 +37,9 @@ alias xclip='xclip -sel clip <'
 
 # latex
 alias pdflatex='pdflatex -interaction=batchmode'
+
+# nginx
+alias ngin='cd /usr/local/etc/nginx'
 
 # dash
 # alias rtg='./dashd -regtest -daemon -debug -use-grapheneblocks=1 -conf=/home/nchawla3/dash/dash.conf'

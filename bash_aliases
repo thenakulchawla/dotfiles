@@ -16,21 +16,6 @@ alias g++='g++ -std=c++11'
 alias g='git'
 alias py3='python3'
 alias tf="terraform"
-# alias compile='( cd ~/workspace/ns-allinone-3.25/ns-3.25 && ./waf )'
-# alias dash='cd ~/dash/src'
-# alias wallpaper='( cd ~/timepass/quoteswall && python changeWallpaperMac.py )'
-
-# VMs
-# alias vm0='ssh nchawla3@10.107.19.39'
-# alias vm1='ssh nchawla3@10.107.19.40'
-# alias vm2='ssh nchawla3@10.107.19.41'
-# alias vm3='ssh nchawla3@10.107.19.42'
-# alias vm4='ssh nchawla3@10.107.19.43'
-# alias vm5='ssh nchawla3@10.107.19.34'
-# alias vm6='ssh nchawla3@10.107.19.35'
-# alias vm7='ssh nchawla3@10.107.19.36'
-# alias vm8='ssh nchawla3@10.107.19.37'
-# alias vm9='ssh nchawla3@10.107.19.38'
 
 # xclip
 alias xclip='xclip -sel clip <'
@@ -49,14 +34,6 @@ alias dstop='docker stop $(docker ps -aq)'
 alias drm='docker rm $(docker ps -aq)'
 alias drmi='docker rmi $(docker images -aq)'
 
-# dash
-# alias rtg='./dashd -regtest -daemon -debug -use-grapheneblocks=1 -conf=/home/nchawla3/dash/dash.conf'
-# alias rtcl='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug'
-# alias rtcl_1='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug -port=8330 -rpcport=8331'
-# alias rtcl_2='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug -port=8332 -rpcport=8333'
-# alias rtcl_3='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug -port=8334 -rpcport=8335'
-# alias rtcl_4='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug -port=8336 -rpcport=8337'
-
 # managers
 alias manager1='ssh -i .ssh/swarm.pem ubuntu@34.214.192.28'
 alias manager2='ssh -i .ssh/swarm.pem ubuntu@35.162.245.23'
@@ -65,3 +42,7 @@ alias manager3='ssh -i .ssh/swarm.pem ubuntu@52.13.183.184'
 # workers
 alias worker1='ssh -i .ssh/swarm.pem ubuntu@52.43.100.216'
 alias worker2='ssh -i .ssh/swarm.pem ubuntu@52.43.15.59'
+
+# world-wire
+alias auto='cd ~/world-wire-automation'
+alias wws='cd ~/go/src/github.ibm.com/gftn/world-wire-services'

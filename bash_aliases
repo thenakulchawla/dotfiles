@@ -41,6 +41,14 @@ alias pdflatex='pdflatex -interaction=batchmode'
 # nginx
 alias ngin='cd /usr/local/etc/nginx'
 
+# docker
+alias d='docker'
+alias dall='docker ps -aq'
+alias dalli='docker images -aq'
+alias dstop='docker stop $(docker ps -aq)'
+alias drm='docker rm $(docker ps -aq)'
+alias drmi='docker rmi $(docker images -aq)'
+
 # dash
 # alias rtg='./dashd -regtest -daemon -debug -use-grapheneblocks=1 -conf=/home/nchawla3/dash/dash.conf'
 # alias rtcl='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug'
@@ -48,3 +56,12 @@ alias ngin='cd /usr/local/etc/nginx'
 # alias rtcl_2='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug -port=8332 -rpcport=8333'
 # alias rtcl_3='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug -port=8334 -rpcport=8335'
 # alias rtcl_4='./dash-cli -regtest -daemon -use-grapheneblocks=1 -debug -port=8336 -rpcport=8337'
+
+# managers
+alias manager1='ssh -i .ssh/swarm.pem ubuntu@34.214.192.28'
+alias manager2='ssh -i .ssh/swarm.pem ubuntu@35.162.245.23'
+alias manager3='ssh -i .ssh/swarm.pem ubuntu@52.13.183.184'
+
+# workers
+alias worker1='ssh -i .ssh/swarm.pem ubuntu@52.43.100.216'
+alias worker2='ssh -i .ssh/swarm.pem ubuntu@52.43.15.59'

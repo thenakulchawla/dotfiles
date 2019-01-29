@@ -28,8 +28,8 @@ alias ngin='cd /usr/local/etc/nginx'
 
 # docker
 alias d='docker'
-alias dall='docker ps -aq'
-alias dalli='docker images -aq'
+alias dall='docker ps -a'
+alias dalli='docker images -a'
 alias dstop='docker stop $(docker ps -aq)'
 alias drm='docker rm $(docker ps -aq)'
 alias drmi='docker rmi $(docker images -aq)'

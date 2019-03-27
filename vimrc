@@ -58,9 +58,9 @@ filetype plugin indent on    " required
     set nohlsearch  " Do not highlight searches
 
 " Text width
-    " set tw=120           " Textwidth
-    " set wrap            " Wrap around textwidth
-    " set cc=+1           " Display vertical colorcolumn at `tw`+1
+    set tw=120           " Textwidth
+    set wrap            " Wrap around textwidth
+    set cc=+1           " Display vertical colorcolumn at `tw`+1
 
 " Appearance
     set cul                     " Highlight cursor line

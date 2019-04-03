@@ -9,6 +9,7 @@ Plug 'tpope/vim-surround' " Vim surround
 Plug 'berdandy/ansiesc.vim' "Ansiesc to conceal ANSI escape sequences
 Plug 'tomtom/tcomment_vim' "Commenting
 Plug 'tpope/vim-unimpaired' "Using it currently for paste toggle
+Plug 'Valloric/YouCompleteMe' "You complete me
 
 call plug#end()
 
@@ -53,14 +54,9 @@ filetype plugin indent on    " required
 
 " Search
     set incsearch   " Search as you type
-    set ignorecase
+    set noignorecase
     set smartcase   " Search case-sensitively if there's at least one capitalized letter
     set nohlsearch  " Do not highlight searches
-
-" Text width
-    set tw=120           " Textwidth
-    set wrap            " Wrap around textwidth
-    set cc=+1           " Display vertical colorcolumn at `tw`+1
 
 " Appearance
     set cul                     " Highlight cursor line
@@ -89,8 +85,6 @@ filetype plugin indent on    " required
         let g:solarized_termcolors=16
         set background=light        " Goes well with solarized
         let g:solarized_visibility = "high"
-        " let g:solarized_contrast = "high"
-        " let g:solarized_termtrans = 1
         colorscheme solarized
 
 
@@ -169,63 +163,5 @@ filetype plugin indent on    " required
         " Use ',' as leader key instead of '\'
         let mapleader =  ","
 
-" QUESTIONS
-
-" highlight ColorColumn ctermbg=7
-" set ruler                     " show the line number on the bar
-" set more                      " use more prompt
-" set autoread                  " watch for file changes
-" set modifiable
-" set number                    " line numbers
-" set hidden
-" set noautowrite               " don't automagically write on :next
-" set lazyredraw                " don't redraw when don't have to
-" set showmode
-" set showcmd
-" set nocompatible              " vim, not vi
-" set autoindent smartindent    " auto/smart indent
-" set smarttab                  " tab and backspace are smart
-" set shiftwidth=2
-" set expandtab
-" set scrolloff=5               " keep at least 5 lines above/below
-" set sidescrolloff=5           " keep at least 5 lines left/right
-" set history=1000
-" set backspace=indent,eol,start
-" set linebreak
-" set cmdheight=2               " command line two lines high
-" set undolevels=1000           " 1000 undos
-" set updatecount=100           " switch every 100 chars
-" set complete=.,w,b,u,U,t,i,d  " do lots of scanning on tab completion
-" set ttyfast                   " we have a fast terminal
-" set noerrorbells              " No error bells please
-" set ffs=unix,mac
-" set relativenumber            "relative numbers
-" set pastetoggle=<F2>          "Use F2 key to toggle set paste in insert mode
-
-" set wildmode=longest:full
-" set wildmenu                  " menu has tab completion
-" let maplocalleader=','        " all my macros start with ,
-" set laststatus=2
-" set hls
-" set number
-" set ai
-" set noswapfile
-" set foldmethod=syntax
-
-" hi clear SpellBad
-" hi SpellBad cterm=underline
-
-"  command! -nargs=1 -complete=file -bang -bar BDE call ReplaceBuffer('<bang>', <f-args>)
-"
-"   " spelling
-"  if v:version >= 700
-"     " Enable spell check for text files, tex files
-"       autocmd BufNewFile,BufRead *.tex setlocal spell spelllang=en
-"       autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
-" endif
-" " mappings
-" " toggle list mode
-" nmap <LocalLeader>tl :set list!<cr>
-" " toggle paste mode
-" nmap <LocalLeader>pp :set paste!<cr>
-" " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" Buffer
+ command! -nargs=1 -complete=file -bang -bar BDE call ReplaceBuffer('<bang>', <f-args>)

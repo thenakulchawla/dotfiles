@@ -11,6 +11,9 @@ Plug 'tomtom/tcomment_vim' "Commenting
 Plug 'tpope/vim-unimpaired' "Using it currently for paste toggle
 Plug 'Valloric/YouCompleteMe' "You complete me
 
+" PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 call plug#end()
 
 filetype plugin indent on    " required

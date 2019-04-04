@@ -23,25 +23,8 @@ alias xclip='xclip -sel clip <'
 # latex
 alias pdflatex='pdflatex -interaction=batchmode'
 
-# nginx
-alias ngin='cd /usr/local/etc/nginx'
-
-# docker
-alias d='docker'
-alias dall='docker ps -a'
-alias dalli='docker images -a'
-alias dstop='docker stop $(docker ps -aq)'
-alias drm='docker rm $(docker ps -aq)'
-alias drmi='docker rmi $(docker images -aq)'
-
-# managers
-alias manager1='ssh -i .ssh/swarm.pem ubuntu@34.214.192.28'
-alias manager2='ssh -i .ssh/swarm.pem ubuntu@35.162.245.23'
-alias manager3='ssh -i .ssh/swarm.pem ubuntu@52.13.183.184'
-
-# workers
-alias worker1='ssh -i .ssh/swarm.pem ubuntu@52.43.100.216'
-alias worker2='ssh -i .ssh/swarm.pem ubuntu@52.43.15.59'
+# ssh
+alias dev='ssh -i ~/.ssh/nakul-dev.pem ubuntu@34.221.83.232'
 
 # world-wire
 alias auto='cd ~/world-wire-automation'

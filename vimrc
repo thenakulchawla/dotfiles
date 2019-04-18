@@ -9,7 +9,10 @@ Plug 'tpope/vim-surround' " Vim surround
 Plug 'berdandy/ansiesc.vim' "Ansiesc to conceal ANSI escape sequences
 Plug 'tomtom/tcomment_vim' "Commenting
 Plug 'tpope/vim-unimpaired' "Using it currently for paste toggle
-Plug 'Valloric/YouCompleteMe' "You complete me
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go autocomplete
+Plug 'Blackrush/vim-gocode' " vim go-code
+Plug 'Valloric/YouCompleteMe'
+
 
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -63,9 +66,9 @@ filetype plugin indent on    " required
 
 " Appearance
     set cul                     " Highlight cursor line
-    set list                    " Display special chars
-    set listchars=tab:»\ ,trail:«,nbsp:«
-                                " Display these chars in place of special chars
+    " set listchars=tab:>-,trail:-,nbsp:« " Display these chars in place of special chars
+    " set list
+
     set relativenumber number   " Display line no. relative to current line.
                                 " Display abs line no. for current line.
     set lazyredraw
@@ -129,6 +132,7 @@ filetype plugin indent on    " required
 
     set modeline                    " enable file-specific vim settings e.g. `# vim: set tw=0:`
     set modelines=5                 " look for file-specific settings in these many lines
+
 
 "Key Remaps
 

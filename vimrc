@@ -10,6 +10,9 @@ Plug 'berdandy/ansiesc.vim' "Ansiesc to conceal ANSI escape sequences
 Plug 'tomtom/tcomment_vim' "Commenting
 Plug 'tpope/vim-unimpaired' "Using it currently for paste toggle
 
+" PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 call plug#end()
 
 filetype plugin indent on    " required
@@ -58,14 +61,14 @@ filetype plugin indent on    " required
     set nohlsearch  " Do not highlight searches
 
 " Text width
-    set tw=120           " Textwidth
-    set wrap            " Wrap around textwidth
-    set cc=+1           " Display vertical colorcolumn at `tw`+1
+    " set tw=120           " Textwidth
+    " set wrap            " Wrap around textwidth
+    " set cc=+1           " Display vertical colorcolumn at `tw`+1
 
 " Appearance
     set cul                     " Highlight cursor line
-    set list                    " Display special chars
-    set listchars=tab:»\ ,trail:«,nbsp:«
+    " set list                    " Display special chars
+    " set listchars=tab:»\ ,trail:«,nbsp:«
                                 " Display these chars in place of special chars
     set relativenumber number   " Display line no. relative to current line.
                                 " Display abs line no. for current line.

@@ -78,3 +78,5 @@ export HORIZON_CLIENT_URL="https://horizon-testnet.stellar.org"
 export ORIGIN_ALLOWED="true"
 export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:$PATH
 export CC=clang
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

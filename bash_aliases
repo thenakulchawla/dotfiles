@@ -10,8 +10,10 @@ alias home='cd'
 alias g++='g++ -std=c++11'
 alias g='git'
 alias py3='python3'
-alias pi1='ssh pi@192.168.0.20'
-alias pi2='ssh pi@192.168.0.22'
+alias pi1='ssh pi@192.168.0.6'
+alias pi2='ssh pi@192.168.0.5'
+
+alias serve='bundle exec jekyll serve'
 
 # VMs
 # alias vm0='ssh nchawla3@10.107.19.39'

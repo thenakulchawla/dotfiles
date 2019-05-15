@@ -13,6 +13,13 @@ Plug 'tpope/vim-unimpaired' "Using it currently for paste toggle
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+" Auto complete
+Plug 'davidhalter/jedi-vim' "Python autocomplete
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'} " Go autocomplete
+Plug 'Blackrush/vim-gocode' " vim go-code
+
+
 call plug#end()
 
 filetype plugin indent on    " required

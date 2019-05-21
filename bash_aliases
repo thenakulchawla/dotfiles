@@ -1,3 +1,21 @@
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # Mac OSX
+    alias ls='ls -1GF'
+    alias sl='ls -lGF'
+    alias ll='ls -hltGF'
+    alias la='ls -ahltGF'
+    alias displayoff='pmset displaysleepnow'
+    alias pyc='find . -type f -name \*.pyc -delete'
+else
+    # Linux
+    alias ls='ls -1 --color=auto'
+    alias sl='ls -l --color=auto'
+    alias ll='ls -hlt --color=auto'
+    alias la='ls -ahlt --color=auto'
+    alias pyc='pyclean .'
+fi
+
+
 alias ll='ls -GFhA'
 alias shell='echo $SHELL'
 alias path='echo $PATH'

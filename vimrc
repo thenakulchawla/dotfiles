@@ -96,12 +96,12 @@ filetype plugin indent on    " required
 
     " Colors
         syntax on                   " enable syntax based highlighting
-        let g:solarized_termcolors=16
+        " let g:solarized_termcolors=16
         set background=light        " Goes well with solarized
-        let g:solarized_visibility = "high"
+        " let g:solarized_visibility = "high"
         " let g:solarized_contrast = "high"
         " let g:solarized_termtrans = 1
-        colorscheme solarized
+        " colorscheme solarized
 
 
     " NERDtree

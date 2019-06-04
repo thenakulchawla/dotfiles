@@ -19,3 +19,12 @@ tool = vimdiff
 [user]
 name = nakul
 email = nakul@ibm.com
+
+[includeIf "gitdir:~/personal/"]
+  path = ~/personal/.gitconfig
+
+
+# [core]
+# autocrlf = false
+# longpaths = true
+#

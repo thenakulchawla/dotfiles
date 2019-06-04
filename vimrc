@@ -12,6 +12,10 @@ Plug 'tpope/vim-unimpaired' "Using it currently for paste toggle
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go autocomplete
 Plug 'Blackrush/vim-gocode' " vim go-code
 Plug 'Valloric/YouCompleteMe'
+Plug 'davidhalter/jedi-vim'
+
+" Typescript
+Plug 'leafgarland/typescript-vim'
 
 
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script

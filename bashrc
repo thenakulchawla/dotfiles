@@ -28,3 +28,4 @@ function quit {
 }
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+alias ic="ibmcloud"

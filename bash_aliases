@@ -29,3 +29,6 @@ alias dev='ssh -i ~/.ssh/nakul-dev.pem ubuntu@34.221.83.232'
 # world-wire
 alias auto='cd ~/world-wire-automation'
 alias wws='cd ~/go/src/github.ibm.com/gftn/world-wire-services'
+alias ibm='ssh -i ~/.ssh/id_ibm_cloud stellar@184.173.31.158'
+
+alias auth='cd /Users/nc/go/src/github.ibm.com/gftn/world-wire-services/auth-service'

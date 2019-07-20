@@ -74,8 +74,8 @@ filetype plugin indent on    " required
 
 " Appearance
     set cul                     " Highlight cursor line
-    " set list                    " Display special chars
-    " set listchars=tab:»\ ,trail:«,nbsp:«
+    set list                    " Display special chars
+    set listchars=tab:»\ ,trail:«,nbsp:«
                                 " Display these chars in place of special chars
     set relativenumber number   " Display line no. relative to current line.
                                 " Display abs line no. for current line.
@@ -87,21 +87,21 @@ filetype plugin indent on    " required
 
     " Folding
       syntax enable
-        " set foldenable
+        set foldenable
         set foldmethod=syntax " Fold based on syntax levels
         set foldlevelstart=2    " Start folding from the 10th innermost block
 
         " Which commands open a fold
-        " set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
+        set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
 
     " Colors
         syntax on                   " enable syntax based highlighting
-        " let g:solarized_termcolors=16
-        set background=light        " Goes well with solarized
-        " let g:solarized_visibility = "high"
-        " let g:solarized_contrast = "high"
-        " let g:solarized_termtrans = 1
-        " colorscheme solarized
+        let g:solarized_termcolors=16
+        set background=dark        " Goes well with solarized
+        let g:solarized_visibility = "high"
+        let g:solarized_contrast = "high"
+        let g:solarized_termtrans = 1
+        colorscheme solarized
 
 
     " NERDtree
@@ -173,7 +173,7 @@ filetype plugin indent on    " required
 
     " 'NERDtree' with C-n
 
-        map <C-n> :NERDTreeToggle<CR>
+        " map <C-n> :NERDTreeToggle<CR>
 
     " Leader key maps
         " Use ',' as leader key instead of '\'

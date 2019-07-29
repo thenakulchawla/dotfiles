@@ -1,3 +1,21 @@
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # Mac OSX
+    # alias ls='ls -1GF'
+    alias sl='ls -lGF'
+    alias ll='ls -hltGF'
+    alias la='ls -ahltGF'
+    alias displayoff='pmset displaysleepnow'
+    alias pyc='find . -type f -name \*.pyc -delete'
+else
+    # Linux
+    alias ls='ls -1 --color=auto'
+    alias sl='ls -l --color=auto'
+    alias ll='ls -hlt --color=auto'
+    alias la='ls -ahlt --color=auto'
+    alias pyc='pyclean .'
+fi
+
+
 alias ll='ls -GFhA'
 alias shell='echo $SHELL'
 alias path='echo $PATH'
@@ -7,15 +25,15 @@ alias cls="clear && printf '\e[3J'"
 alias localvar='cd /usr/local/var'
 alias usr='cd /usr'
 alias home='cd'
-# alias lab='ssh nchawla3@10.218.108.75'
 alias g++='g++ -std=c++11'
-# alias dwaf='~/workspace/ns-allinone-3.25/ns-3.25'
-# alias dscr='~/workspace/ns-allinone-3.25/ns-3.25/scratch'
-# alias dhelper='~/workspace/ns-allinone-3.25/ns-3.25/src/applications/helper'
-# alias dmodel='~/workspace/ns-allinone-3.25/ns-3.25/src/applications/model'
 alias g='git'
 alias py3='python3'
-alias tf="terraform"
+
+# xclip
+alias xclip='xclip -sel clip <'
+
+# latex
+alias pdflatex='pdflatex -interaction=batchmode'
 
 # xclip
 alias xclip='xclip -sel clip <'
@@ -27,8 +45,16 @@ alias pdflatex='pdflatex -interaction=batchmode'
 alias dev='ssh -i ~/.ssh/nakul-dev.pem ubuntu@34.221.83.232'
 
 # world-wire
-alias auto='cd ~/world-wire-automation'
 alias wws='cd ~/go/src/github.ibm.com/gftn/world-wire-services'
+alias auto='cd ~/go/src/github.ibm.com/gftn/world-wire-automation'
 alias ibm='ssh -i ~/.ssh/id_ibm_cloud stellar@184.173.31.158'
 
 alias auth='cd /Users/nc/go/src/github.ibm.com/gftn/world-wire-services/auth-service'
+
+# tmux
+alias tl='tmux list-sessions'
+alias ta='tmux attach-session -t'
+alias tn='tmux new -s'
+
+# tasks
+alias tasks='grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null'

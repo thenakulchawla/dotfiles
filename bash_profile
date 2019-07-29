@@ -23,3 +23,13 @@ export PATH=$PATH:$GOROOT/bin
 
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# gcloud
+export PATH="$HOME/google-cloud-sdk/bin:$PATH"
+
+# kops
+export KOPS_CLUSTER_NAME=development.worldwire-dev.io.k8s.local
+export KOPS_STATE_STORE=s3://ww-kube-dev
+
+# ibm cloud zsh autocomplete
+# source /usr/local/ibmcloud/autocomplete/zsh_autocomplete

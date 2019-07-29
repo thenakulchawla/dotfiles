@@ -29,3 +29,6 @@ function quit {
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias ic="ibmcloud"
+
+# added by travis gem
+[ -f /Users/nc/.travis/travis.sh ] && source /Users/nc/.travis/travis.sh

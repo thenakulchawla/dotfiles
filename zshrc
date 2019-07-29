@@ -63,3 +63,12 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/nc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nc/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/nc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nc/google-cloud-sdk/completion.zsh.inc'; fi
+
+# added by travis gem
+[ -f /Users/nc/.travis/travis.sh ] && source /Users/nc/.travis/travis.sh

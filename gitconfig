@@ -28,3 +28,5 @@ email = nakul@ibm.com
 # autocrlf = false
 # longpaths = true
 #
+[url "git@github.ibm.com:"]
+	insteadOf = https://github.ibm.com/

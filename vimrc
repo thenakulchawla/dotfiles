@@ -11,7 +11,6 @@ Plug 'tomtom/tcomment_vim' "Commenting
 Plug 'tpope/vim-unimpaired' "Using it currently for paste toggle
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go autocomplete
 Plug 'Blackrush/vim-gocode' " vim go-code
-Plug 'Valloric/YouCompleteMe'
 Plug 'davidhalter/jedi-vim'
 
 " Typescript
@@ -66,26 +65,14 @@ filetype plugin indent on    " required
     set incsearch   " Search as you type
     set noignorecase
     set smartcase   " Search case-sensitively if there's at least one capitalized letter
-    set nohlsearch  " Do not highlight searches
+    set hlsearch  " Do not highlight searches
 
-" Appearance
-    set cul                     " Highlight cursor line
-    " set listchars=tab:>-,trail:-,nbsp:« " Display these chars in place of special chars
-    " set list
-
-    set relativenumber number   " Display line no. relative to current line.
-                                " Display abs line no. for current line.
-    set lazyredraw
-    set title                   " change the terminal's title
-    set showcmd                 " show (partial) command in the last line of the screen
-                                " this also shows visual selection info
-    set scrolloff=2             " Always keep 4 lines off the edges when scrolling up/down
 
     " Folding
       syntax enable
-        " set foldenable
+        set foldenable
         set foldmethod=syntax " Fold based on syntax levels
-        set foldlevelstart=2    " Start folding from the 10th innermost block
+        " set foldlevelstart=2    " Start folding from the 10th innermost block
 
         " Which commands open a fold
         " set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
@@ -136,6 +123,23 @@ filetype plugin indent on    " required
 
     set modeline                    " enable file-specific vim settings e.g. `# vim: set tw=0:`
     set modelines=5                 " look for file-specific settings in these many lines
+
+" Appearance
+    set cul                     " Highlight cursor line
+    " set listchars=tab:\│\ ,trail:-,extends:>,precedes:<,nbsp:«
+    set listchars=tab:»\ ,trail:«,nbsp:«
+    set list
+
+    set relativenumber number   " Display line no. relative to current line.
+                                " Display abs line no. for current line.
+    set lazyredraw
+    set title                   " change the terminal's title
+    set showcmd                 " show (partial) command in the last line of the screen
+                                " this also shows visual selection info
+    set scrolloff=2             " Always keep 4 lines off the edges when scrolling up/down
+    highlight SpecialKey ctermfg=grey ctermbg=black
+    highlight SpecialKey guifg=#333333 guibg=#111111
+    set termguicolors
 
 
 "Key Remaps

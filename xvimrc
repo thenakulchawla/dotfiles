@@ -96,23 +96,8 @@ filetype plugin indent on    " required
 
     " Colors
         syntax on                   " enable syntax based highlighting
-        let g:solarized_termcolors=16
-        set background=dark        " Goes well with solarized
-        let g:solarized_visibility = "high"
-        let g:solarized_contrast = "high"
-        let g:solarized_termtrans = 1
-        colorscheme solarized
-
-
-    " NERDtree
-        autocmd StdinReadPre * let s:std_in=1
-        autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-        let NERDTreeMinimalUI = 1
-        let NERDTreeDirArrows = 1
-        let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " Behaviour
-    set switchbuf=useopen           " Jump to first open window for the buffer
     set backspace=indent,eol,start  " allow backspacing over everything in insert mode
     set history=1000                " remember more commands and search history
     set splitright                  " split new windows on current window's right side
@@ -149,31 +134,7 @@ filetype plugin indent on    " required
 
         nnoremap ; :
         nnoremap : ;
-        cnoremap sudow w !sudo tee % >/dev/null
-        map j gj
-        map k gk
 
-    " Control Keys
-
-        map <space>q  <c-W>q
-        map <space>H  <c-W>H
-        map <space>J  <c-W>J
-        map <space>K  <c-W>K
-        map <space>L  <c-W>L
-        map <space>h  <c-W>h
-        map <space>j  <c-W>j
-        map <space>k  <c-W>k
-        map <space>l  <c-W>l
-        map <space>w  <c-W>w
-        map <space>W  <c-W>W
-
-    " 'g' maps
-
-        map gR ;vertical resize
-
-    " 'NERDtree' with C-n
-
-        " map <C-n> :NERDTreeToggle<CR>
 
     " Leader key maps
         " Use ',' as leader key instead of '\'

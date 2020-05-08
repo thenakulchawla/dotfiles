@@ -45,8 +45,8 @@ bindkey '^r' history-incremental-search-backward
 # ctrl-y inserts the content of the kill buffer at the current position
 bindkey '^y' yank
 
-# alt-. inserts last arg from previous commands
-bindkey '\e.' insert-last-word
+bindkey '^e' end-of-line
+bindkey '^a' beginning-of-line
 
 bindkey -M vicmd '?' history-incremental-search-backward
 bindkey -M vicmd '/' history-incremental-search-forward
@@ -54,3 +54,4 @@ bindkey -M vicmd '\e.' insert-last-word
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

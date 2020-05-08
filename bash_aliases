@@ -14,6 +14,7 @@ fi
 alias tl='tmux list-sessions'
 alias ta='tmux attach-session -t'
 alias tn='tmux new -s'
+alias tk='tmux kill-session -t'
 
 alias shell='echo $SHELL'
 alias path='echo $PATH'
@@ -30,17 +31,5 @@ alias py3='python3'
 alias pi1='ssh pi@192.168.0.4'
 alias pi2='ssh pi@192.168.0.7'
 
-alias serve='bundle exec jekyll serve'
-
-# xclip
-alias xclip='xclip -sel clip <'
-
-# latex
-alias pdflatex='pdflatex -interaction=batchmode'
-
-# VMs
-alias vm0='ssh nchawla3@10.107.19.39'
-alias vm1='ssh nchawla3@10.107.19.40'
-alias vm2='ssh nchawla3@10.107.19.41'
-alias vm3='ssh nchawla3@10.107.19.42'
-alias vm4='ssh nchawla3@10.107.19.43'
+alias lsg='ls | grep'
+alias psg='ps -ef| grep'

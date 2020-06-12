@@ -1,4 +1,3 @@
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -83,10 +82,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile
 fi
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

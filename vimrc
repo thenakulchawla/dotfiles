@@ -19,6 +19,9 @@ Plug 'davidhalter/jedi-vim' "Python autocomplete
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'} " Go autocomplete
 Plug 'Blackrush/vim-gocode' " vim go-code
 
+" Solarized colorscheme
+Plug 'altercation/vim-colors-solarized'
+
 
 call plug#end()
 
@@ -96,7 +99,7 @@ filetype plugin indent on    " required
 
     " Colors
         syntax on                   " enable syntax based highlighting
-        let g:solarized_termcolors=16
+        let g:solarized_termcolors=256
         set background=dark        " Goes well with solarized
         let g:solarized_visibility = "high"
         let g:solarized_contrast = "high"

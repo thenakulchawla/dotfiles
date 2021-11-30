@@ -4,6 +4,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias la='ls -ahltGF'
     alias displayoff='pmset displaysleepnow'
     alias pyc='find . -type f -name \*.pyc -delete'
+    alias vi='/opt/homebrew/bin/vim'
+    alias vim='/opt/homebrew/bin/vim'
 else
     # Linux
     alias ll='ls -a --color=auto'
@@ -27,9 +29,11 @@ alias cloud='cd /Users/nakulchawla/Library/Mobile\ Documents/com~apple~CloudDocs
 alias home='cd'
 alias g++='g++ -std=c++11'
 alias g='git'
-alias py3='python3'
-alias pi1='ssh pi@192.168.86.25'
-alias pi2='ssh pi@192.168.86.24'
+alias pi1='ssh ubuntu@192.168.86.210'
+alias pi2='ssh ubuntu@192.168.86.211'
+alias pi3='ssh ubuntu@192.168.86.212'
+alias pi4='ssh ubuntu@192.168.86.213'
+
 
 alias lsg='ls | grep'
 alias psg='ps -ef| grep'

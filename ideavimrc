@@ -14,7 +14,7 @@ set nocompatible              " required
 
 filetype plugin indent on    " requiredi
 
-syntax enable 
+syntax enable
 
 highlight ColorColumn ctermbg=7
 
@@ -29,8 +29,6 @@ set lazyredraw                " don't redraw when don't have to
 set showmode
 set showcmd
 set nocompatible              " vim, not vi
-set autoindent smartindent    " auto/smart indent
-set smarttab                  " tab and backspace are smart
 set shiftwidth=4
 set expandtab
 set scrolloff=5               " keep at least 5 lines above/below
@@ -48,6 +46,7 @@ set fileformats=unix
 set ff=unix
 set relativenumber            "relative numbers
 set pastetoggle=<F2>          "Use F2 key to toggle set paste in insert mode
+
 " For CLion bell sounds
 set visualbell
 set noerrorbells
@@ -59,15 +58,27 @@ set laststatus=2
 set hls
 set number
 set ai
-" set noswapfile
-set foldmethod=syntax
-hi clear SpellBad
-hi SpellBad cterm=underline
+
+" Behaviour
+  set noswapfile
+
+  set foldmethod=syntax
+  hi clear SpellBad
+  hi SpellBad cterm=underline
 
 "  searching
- set incsearch                 " incremental search
- set noignorecase                " search ignoring case
+  set incsearch                 " incremental search
+  set noignorecase                " search ignoring case
+
 "  set ignorecase                " search ignoring case
- set hlsearch                  " highlight the search
- set showmatch                 " show matching bracket
- set diffopt=filler,iwhite     " ignore all whitespace and sync
+  set hlsearch                  " highlight the search
+  set showmatch                 " show matching bracket
+  set diffopt=filler,iwhite     " ignore all whitespace and sync
+
+ " Plugins
+  set surround
+
+ " Indent
+  set autoindent
+  set smartindent    " auto/smart indent
+  set smarttab                  " tab and backspace are smart

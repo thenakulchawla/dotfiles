@@ -4,7 +4,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Go
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/go
+export GOROOT=/opt/homebrew/Cellar/go/1.16.6
 
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
@@ -14,18 +14,26 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 
+function quit {
+    osascript -e 'tell application "Terminal" to quit'
+}
+
+# Homebrew
+export PATH=$PATH:/opt/homebrew/bin
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export EDITOR=/opt/homebrew/bin/vim
+fi
+
+
+#pyenv
+PATH=$(pyenv root)/shims:$PATH
+
+# linkerd
+export PATH=$PATH:/Users/nakulchawla/.linkerd2/bin
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/nakulchawla/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nakulchawla/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/nakulchawla/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nakulchawla/google-cloud-sdk/completion.zsh.inc'; fi
-
-function quit {
-    osascript -e 'tell application "Terminal" to quit'
-}
-
-# The next line updates PATH for the Google Cloud SDK.
-# if [ -f '/Users/nakulchawla/google-cloud-sdk/path.bash.inc' ]; then . '/Users/nakulchawla/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-# if [ -f '/Users/nakulchawla/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/nakulchawla/google-cloud-sdk/completion.bash.inc'; fi

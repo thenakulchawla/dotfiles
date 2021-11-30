@@ -1,5 +1,3 @@
-autocmd InsertEnter * : silent exec "!printf '\033]50;CursorShape=2\x7'" | exec ":redraw!"
-autocmd InsertLeave * : silent exec "!printf '\033]50;CursorShape=0\x7'" | exec ":redraw!"
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
@@ -16,11 +14,13 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Auto complete
 Plug 'davidhalter/jedi-vim' "Python autocomplete
 
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'} " Go autocomplete
-Plug 'Blackrush/vim-gocode' " vim go-code
-
 " Solarized colorscheme
 Plug 'altercation/vim-colors-solarized'
+
+" Python
+Plug 'vim-scripts/indentpython.vim'       " Indent python according to PEP8
+Plug 'tmhedberg/SimpylFold'               " Fold python
+Plug 'python-mode/python-mode'
 
 
 call plug#end()
@@ -57,6 +57,8 @@ filetype plugin indent on    " required
       exec "bd" . a:bang . " " . curbuf
     endfunction
 
+" Curser
+    set guicursor=i:ver25-iCursor
 
 " character
     call SetTabWidth(2)
@@ -71,16 +73,16 @@ filetype plugin indent on    " required
     set nohlsearch  " Do not highlight searches
 
 " Text width
-    " set tw=120           " Textwidth
-    " set wrap            " Wrap around textwidth
-    " set cc=+1           " Display vertical colorcolumn at `tw`+1
+    set tw=120           " Textwidth
+    set wrap            " Wrap around textwidth
+    set cc=+1           " Display vertical colorcolumn at `tw`+1
 
 " Appearance
     set cul                     " Highlight cursor line
     set list                    " Display special chars
     set listchars=tab:»\ ,trail:«,nbsp:«
                                 " Display these chars in place of special chars
-    " set relativenumber number   " Display line no. relative to current line.
+    set relativenumber number   " Display line no. relative to current line.
                                 " Display abs line no. for current line.
     set lazyredraw
     set title                   " change the terminal's title
@@ -100,10 +102,10 @@ filetype plugin indent on    " required
     " Colors
         syntax on                   " enable syntax based highlighting
         let g:solarized_termcolors=256
-        set background=dark        " Goes well with solarized
         let g:solarized_visibility = "high"
         let g:solarized_contrast = "high"
         let g:solarized_termtrans = 1
+        set background=light        " Goes well with solarized
         colorscheme solarized
 
 

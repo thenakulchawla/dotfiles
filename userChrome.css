@@ -16,25 +16,17 @@
   padding: 0 !important;
 }
 
+/* hides the native tabs */
+#TabsToolbar {
+  visibility: collapse;
+}
 
-/* #main-window[sizemode="normal"] #TabsToolbar { */
-/*   margin-top: -1px !important; */
-/* } */
-/*  */
-/* .tabbrowser-tab[selected] { */
-/*   color: #000000 !important; */
-/* } */
-/*  */
-/* .tabbrowser-tab:not([pinned="true"]) { */
-/*   max-width: 175px !important; */
-/* } */
-/*  */
-/* #TabsToolbar { height: 25px !important; } */
-/* #PersonalToolbar {height: 5px !important;} */
+/* hides the title bar */
+#titlebar {
+  visibility: collapse;
+}
 
-/* @media (-moz-windows-glass) { */
-/*   #TabsToolbar:not(:-moz-lwtheme)::after { */
-/*     box-shadow: 0 0 30px 30px rgba(0,0,0,0) !important; */
-/*   } */
-/* } */
-
+/* hides the sidebar */
+#sidebar-header {
+  visibility: collapse !important;
+} 

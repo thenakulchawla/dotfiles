@@ -29,10 +29,10 @@ alias cloud='cd /Users/nakulchawla/Library/Mobile\ Documents/com~apple~CloudDocs
 alias home='cd'
 alias g++='g++ -std=c++11'
 alias g='git'
-alias pi1='ssh ubuntu@192.168.86.230'
-alias pi2='ssh ubuntu@192.168.86.229'
-alias pi3='ssh ubuntu@192.168.86.212'
-alias pi4='ssh ubuntu@192.168.86.213'
+alias pi1='ssh kulcha@rpi0.local'
+alias pi2='ssh kulcha@rpi1.local'
+alias pi3='ssh kulcha@rpi2.local'
+alias pi4='ssh kulcha@rpi3.local'
 
 
 alias lsg='ls | grep'

@@ -29,11 +29,12 @@ alias cloud='cd /Users/nakulchawla/Library/Mobile\ Documents/com~apple~CloudDocs
 alias home='cd'
 alias g++='g++ -std=c++11'
 alias g='git'
-alias pi1='ssh kulcha@rpi0.local'
-alias pi2='ssh kulcha@rpi1.local'
-alias pi3='ssh kulcha@rpi2.local'
-alias pi4='ssh kulcha@rpi3.local'
+alias pi0='ssh kulcha@rpi0.local'
+alias pi1='ssh kulcha@rpi1.local'
+alias pi2='ssh kulcha@rpi2.local'
+alias pi3='ssh kulcha@rpi3.local'
 
 
 alias lsg='ls | grep'
 alias psg='ps -ef| grep'
+alias tinkercreds='gcloud container clusters get-credentials tinker --zone us-west1 --project tinker-2024'

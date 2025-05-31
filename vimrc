@@ -152,8 +152,6 @@ filetype plugin indent on    " required
 
     " Standard Keys
 
-        nnoremap ; :
-        nnoremap : ;
         cnoremap sudow w !sudo tee % >/dev/null
         map j gj
         map k gk

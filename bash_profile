@@ -30,3 +30,4 @@ export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
 
 export PATH=$PATH:$HOME/google-cloud-sdk/bin
+export PATH="$HOME/.local/bin:$PATH"

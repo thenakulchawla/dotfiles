@@ -70,5 +70,10 @@
     "editor.stickyScroll.enabled": true,
     "workbench.startupEditor": "none",
     "workbench.settings.editor": "json",
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#472137",
+        "titleBar.activeBackground": "#632E4D",
+        "titleBar.activeForeground": "#FCF9FB"
+    }
 }

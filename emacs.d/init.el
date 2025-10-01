@@ -20,3 +20,27 @@
 
 ;; Load theme
 (require 'theme)
+;; Load keybindings
+(require 'keybindings)
+;; UI improvements
+(setq inhibit-startup-screen t)           ; No startup screen
+(tool-bar-mode -1)                        ; No toolbar
+(menu-bar-mode -1)                        ; No menu bar (optional)
+(scroll-bar-mode -1)                      ; No scroll bar
+(setq ring-bell-function 'ignore)         ; No annoying bell
+
+;; Better defaults
+(setq-default indent-tabs-mode nil)       ; Use spaces, not tabs
+(setq-default tab-width 4)                ; Tab width
+(delete-selection-mode 1)                 ; Replace selection when typing
+(global-auto-revert-mode 1)               ; Auto-reload files changed on disk
+(save-place-mode 1)                       ; Remember cursor position in files
+(setq make-backup-files nil)              ; Stop creating backup~ files
+(setq auto-save-default nil)              ; Stop creating #autosave# files
+
+;; Show line numbers
+(global-display-line-numbers-mode 1)
+
+;; Better completions
+(ido-mode 1)                              ; Better file/buffer switching
+(setq ido-enable-flex-matching t)         ; Fuzzy matching

@@ -38,3 +38,4 @@ alias pi3='ssh kulcha@rpi3.local'
 alias lsg='ls | grep'
 alias psg='ps -ef| grep'
 alias tinkercreds='gcloud container clusters get-credentials tinker --zone us-west1 --project tinker-2024'
+alias emacs="open -a Emacs"

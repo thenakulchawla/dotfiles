@@ -18,6 +18,13 @@
 ;; Add base config directory to load path
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+(use-package treemacs
+  :ensure t
+  :bind (("C-c t" . treemacs))
+  :config
+  (setq treemacs-persist-file nil)  ; Don't remember projects between sessions
+  (treemacs-follow-mode t))          ; Auto-follow current file
+
 ;; Load theme
 (require 'theme)
 ;; Load keybindings
@@ -44,3 +51,15 @@
 ;; Better completions
 (ido-mode 1)                              ; Better file/buffer switching
 (setq ido-enable-flex-matching t)         ; Fuzzy matching
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(solarized-theme treemacs)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

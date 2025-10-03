@@ -34,22 +34,6 @@ for i in "${!FILES_HOME[@]}"; do
     home_path="$HOME/${FILES_HOME[$i]}"
     repo_path="$DOTFILES_DIR/${FILES_REPO[$i]}"
     
-    # Backup existing file/directory if it exists and is not a symlink
-    if [ -e "$home_path" ] && [ ! -L "$home_path" ]; then
-        backup_path="${home_path}.backup.$(date +%Y%m%d_%H%M%S)"
-        echo "Backing up $home_path to $backup_path"
-        mv "$home_path" "$backup_path"
-    fi
-    
-    # Remove existing symlink if it exists
-    if [ -L "$home_path" ]; then
-        rm "$home_path"
-    fi
-    
-    # Create parent directory if needed
-    parent_dir=$(dirname "$home_path")
-    mkdir -p "$parent_dir"
-    
     # Create symlink
     echo "Linking $home_path -> $repo_path"
     ln -sf "$repo_path" "$home_path"
